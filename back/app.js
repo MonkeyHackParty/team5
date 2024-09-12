@@ -209,5 +209,46 @@ app.get('/api/individual/cnt', (req, res) => {
     }
   );
 });
+//場所を登録
+app.post('/api/location', (req, res) => {
+  const family = req.body.family;
+  const locationname = req.body.location;
+  const latitude = req.body.
+    connection.query(
+      'INSERT INTO location (family,locationname,latitude,longtitude) VALUES (?,?,?,?)',
+      [family, locationname, latitude, longtitude],
+      (error, result) => {
+        if (error) throw error;
+        res.json({ data: result });
+      })
+})
+
+
+
+//場所を削除
+app.delete('/api/location/:id', (req, res) => {
+  const id = req.params.id;
+  connection.query(
+    'DELETE FROM location WHERE id = ?',
+    [id],
+    (error, result) => {
+      if (error) throw error;
+      res.json({ data: result });
+    }
+  );
+});
+
+//場所を取得
+app.get('/api/location', (req, res) => {
+  const family = req.body;
+  connection.query(
+    'SELECT locationname FROM location WHERE family = ?',
+    [family],
+    (error, result) => {
+      if (error) throw error;
+      res.json({ data: result });
+    }
+  );
+});
 
 module.exports = app;
