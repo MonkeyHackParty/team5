@@ -1,0 +1,33 @@
+/* components/Button.module.css */
+.button {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .primary {
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid rgb(0, 0, 0);
+  }
+  
+  .primary:hover {
+    text-decoration: underline;
+  }
+  
+  .secondary {
+    background-color: #32ade6;
+    color: white;
+  }
+  
+  .secondary:hover {
+    text-decoration: underline;
+  }
