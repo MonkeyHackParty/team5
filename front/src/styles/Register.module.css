@@ -109,31 +109,42 @@
 
     
     @media (min-width: 1600px) {
+      .container {
+        min-height: 100vh; /* Ensure the container fits within one viewport */
+        padding: 0 20px; /* Adjust padding if necessary */
+      }
+    
       .backgroundWave {
-        height: 800px;
-        top: -400px;
+        top:-50%;
+        height: 100%;
+        background-size: 100% 50%;
       }
+    
       .message {
-        width: 100%;
-        top: 300px;
+        top:250px;
         font-size: 3.5rem;
+        width: 70%;
       }
+    
       .form {
-        position: relative;
-        top: 80px;
-        width: 100%;
+        top:-200px;
       }
+    
       .buttonContainer {
         position: relative;
-        top: 30px;
+        top: 50px; /* Adjusted position */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
         width: 100%;
         margin-top: 2rem;
       }
+    
       .link {
-        position: absolute;
-        font-size: 1.4rem;
-        top: -150px;
+        position: relative;
+        top: -20px;
       }
     }
-}
+  }    
   

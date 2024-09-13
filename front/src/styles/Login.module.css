@@ -126,24 +126,24 @@
 
   .message {
     top:250px;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     width: 70%;
   }
 
   .form {
-    top: 20px;
+    top:-200px;
   }
 
   .buttonContainer {
     position: relative;
-    top: -15px; /* Adjusted position */
+    top: 50px; /* Adjusted position */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     width: 100%;
     margin-top: 2rem;
-}
+  }
 
   .link {
     position: relative;
