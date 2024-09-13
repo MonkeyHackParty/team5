@@ -199,7 +199,7 @@ app.post('/api/individual/need', (req, res) => {
 
 // ニーズのカウント取得
 app.get('/api/individual/cnt', (req, res) => {
-  const family = req.query.family;
+  const family = req.body.family;
   connection.query(
     'SELECT myname, need, cnt FROM needs WHERE family = ? ORDER BY cnt ASC',
     [family],
@@ -209,25 +209,27 @@ app.get('/api/individual/cnt', (req, res) => {
     }
   );
 });
+
 //場所を登録
 app.post('/api/location', (req, res) => {
   const family = req.body.family;
   const locationname = req.body.location;
-  const latitude = req.body.
-    connection.query(
-      'INSERT INTO location (family,locationname,latitude,longtitude) VALUES (?,?,?,?)',
-      [family, locationname, latitude, longtitude],
-      (error, result) => {
-        if (error) throw error;
-        res.json({ data: result });
-      })
+  const latitude = req.body.latitude;
+  const longtitude = req.body.longtitude;
+  connection.query(
+    'INSERT INTO location (family,locationname,latitude,longtitude) VALUES (?,?,?,?)',
+    [family, locationname, latitude, longtitude],
+    (error, result) => {
+      if (error) throw error;
+      res.json({ data: result });
+    })
 })
 
 
 
 //場所を削除
 app.delete('/api/location/:id', (req, res) => {
-  const id = req.params.id;
+  const id = req.body.id;
   connection.query(
     'DELETE FROM location WHERE id = ?',
     [id],
@@ -240,7 +242,7 @@ app.delete('/api/location/:id', (req, res) => {
 
 //場所を取得
 app.get('/api/location', (req, res) => {
-  const family = req.body;
+  const family = req.body.family;
   connection.query(
     'SELECT locationname FROM location WHERE family = ?',
     [family],
@@ -250,5 +252,4 @@ app.get('/api/location', (req, res) => {
     }
   );
 });
-
 module.exports = app;
