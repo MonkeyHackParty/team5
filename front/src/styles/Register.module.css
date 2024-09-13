@@ -68,70 +68,72 @@
   .link a {
     color: inherit;
   }
-  
-  @media (min-width: 1960px) {
-    .backgroundWave {
-      height: 800px;
-      top: -400px;
-    }
-    .message {
-      width: 100%;
-      top: 300px;
-      font-size: 3.5rem;
-    }
-    .form {
-      position: relative;
-      top: 80px;
-      width: 100%;
-    }
-    .buttonContainer {
-      position: relative;
-      top: 30px;
-      width: 100%;
-      margin-top: 2rem;
-    }
-    .link {
-      position: absolute;
-      font-size: 1.4rem;
-      top: -150px;
-    }
-  }
-  @media (min-width: 1960px) {
-    .backgroundWave {
-      height: 800px;
-      top: -400px;
-    }
-    .message {
-      width: 100%;
-      top: 300px; /* Adjust message position on larger screens */
-      font-size: 3.5rem; /* Increase font size for larger screens */
-    }
 
-    .form {
-        position: relative;
-        top: 350px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  @media (min-width: 800px) {
+    .container {
+      min-height: 100vh; /* Ensure the container fits within one viewport */
+      padding: 0 20px; /* Adjust padding if necessary */
     }
-    
+  
+    .backgroundWave {
+      top:-50%;
+      height: 100%;
+      background-size: 100% 50%;
+    }
+  
+    .message {
+      top:90px;
+      font-size: 2.5rem;
+      width: 70%;
+    }
+  
+    .form {
+      top: 20px;
+    }
+  
     .buttonContainer {
       position: relative;
-      top: 30px;
+      top: -15px; /* Adjusted position */
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
       width: 100%;
       margin-top: 2rem;
+  }
+  
+    .link {
+      position: relative;
+      top: -20px;
     }
 
-    .link {
+    
+    @media (min-width: 1600px) {
+      .backgroundWave {
+        height: 800px;
+        top: -400px;
+      }
+      .message {
+        width: 100%;
+        top: 300px;
+        font-size: 3.5rem;
+      }
+      .form {
         position: relative;
-        top:-20px;
+        top: 80px;
+        width: 100%;
+      }
+      .buttonContainer {
+        position: relative;
+        top: 30px;
+        width: 100%;
+        margin-top: 2rem;
+      }
+      .link {
+        position: absolute;
         font-size: 1.4rem;
-        color: #00aaff;
+        top: -150px;
+      }
     }
 }
   

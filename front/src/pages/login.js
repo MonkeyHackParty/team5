@@ -66,10 +66,10 @@ export default function Login() {
           error={password === '' && error ? 'パスワードは必須です。' : ''}
         />
         <div className={styles.buttonContainer}>
-        <Button type="submit" variant="primary">ログイン</Button>  {/* ログインボタン */}
-        <p className={styles.link}>
-         <Link href="/register">アカウントをお持ちでない方はこちら</Link>
-      </p>
+          <Button type="submit" variant="primary">ログイン</Button>  {/* ログインボタン */}
+          <p className={styles.link}>
+          <Link href="/register">アカウントをお持ちでない方はこちら</Link>
+          </p>
         </div>
       </form>
       

@@ -2,6 +2,9 @@
 .container {
     position: relative;
     min-height: 450px;
+    max-width:800;
+    margin-right: auto;
+    margin-left: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -69,42 +72,81 @@
     color: inherit; /* Inherit color from parent */
 }
 
-/* Media query for larger screens */
-@media (min-width: 1960px) {
-    .backgroundWave {
-      height: 800px;
-      top: -400px;
-    }
-    .message {
-      width: 100%;
-      top: 300px; /* Adjust message position on larger screens */
-      font-size: 3.5rem; /* Increase font size for larger screens */
-    }
+/* Media query for screens */
+@media (min-width: 800px) {
+  .container {
+    min-height: 100vh; /* Ensure the container fits within one viewport */
+    padding: 0 20px; /* Adjust padding if necessary */
+  }
 
-    .form {
-        position: relative;
-        top: 350px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .buttonContainer {
-      position: relative;
-      top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-      margin-top: 2rem;
-    }
+  .backgroundWave {
+    top:-50%;
+    height: 100%;
+    background-size: 100% 50%;
+  }
 
-    .link {
-        position: relative;
-        font-size: 1.4rem;
-        top: -20px;
-        color: #00aaff;
-    }
+  .message {
+    top:150px;
+    font-size: 2.5rem;
+    width: 70%;
+  }
+
+  .form {
+    top: 20px;
+  }
+
+  .buttonContainer {
+    position: relative;
+    top: -15px; /* Adjusted position */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+  .link {
+    position: relative;
+    top: -20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    min-height: 100vh; /* Ensure the container fits within one viewport */
+    padding: 0 20px; /* Adjust padding if necessary */
+  }
+
+  .backgroundWave {
+    top:-50%;
+    height: 100%;
+    background-size: 100% 50%;
+  }
+
+  .message {
+    top:250px;
+    font-size: 2.5rem;
+    width: 70%;
+  }
+
+  .form {
+    top: 20px;
+  }
+
+  .buttonContainer {
+    position: relative;
+    top: -15px; /* Adjusted position */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+  .link {
+    position: relative;
+    top: -20px;
+  }
 }

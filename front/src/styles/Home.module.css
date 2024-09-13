@@ -2,6 +2,9 @@
 
 .container {
   position: relative;
+  max-height: 800px;
+  margin-right: auto;
+  margin-left: auto;
   min-height: 450px;
   padding: 20px;
   display: flex;
@@ -58,33 +61,7 @@
   margin-top: 2rem;
 }
 
-@media (min-width: 1960px) {
-  .backgroundWave {
-    height: 800px;
-    top:-400px;
-  }
-
-  .logo {
-    top: 300px; /* Adjust position if needed */
-  }
-  .message {
-    width:100%;
-    top: 300px; /* Adjust message position on larger screens */
-    font-size: 3.5rem; /* Increase font size for larger screens */
-  }
-
-  .buttonContainer {
-    position:relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   .container {
     min-height: 100vh; /* Ensure the container fits within one viewport */
     padding: 0 20px; /* Adjust padding if necessary */
@@ -98,17 +75,30 @@
 
   .logo {
     top: 50px; /* Adjust position if needed */
+    max-width:800px;
+    max-height:200px;
+  
   }
   .message {
     top:150px;
-    font-size: 2.5rem;
-    width: 70%;
   }
 
   .buttonContainer {
-    top:-50px;
+    top:0px;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 3%;
+    gap:6rem;
+  }
+}
+
+@media(min-width:1600px){
+  .log{
+    top:50px;
+  }
+
+  .message{
+    top:250px;
+    font-size:3rem;
   }
 }

@@ -26,3 +26,10 @@
   .secondary:hover {
     text-decoration: underline;
   }
+
+  @media(min-width:800px){
+    .button{
+      width:300px;
+      padding:1rem;
+    }
+  }
