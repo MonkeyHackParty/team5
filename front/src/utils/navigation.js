@@ -11,11 +11,15 @@ const useNavigation = () => {
     router.push('/register');
   };
 
+  const navigateToMain = () => {
+    router.push('/memo_list')
+  }
   // 他のナビゲーション関数も必要に応じて追加
 
   return {
     navigateToLogin,
     navigateToRegister,
+    navigateToMain,
   };
 };
 

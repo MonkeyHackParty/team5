@@ -11,23 +11,20 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.backgroundWave}></div>
-
         <p className={styles.message}>あっという間に家族と共有</p>
-
         <Image
-          className={styles.logo}
           src="/images/HomeLogo.png"
-          alt="シェアっと ロゴ"
-          width={494}
-          height={114}
+          alt="Logo"
+          width={1200}
+          height={300}
+          className={styles.logo}
         />
-
-      <div className={styles.buttonContainer}>
-        <Button variant="primary" onClick={navigateToLogin}>ログイン</Button>  {/* ログインボタン */}
-        <Button variant="secondary" onClick={navigateToRegister}>新規登録</Button>  {/* 新規登録ボタン */}
+        
+        <div className={styles.buttonContainer}>
+          <Button variant="primary" onClick={navigateToLogin}>ログイン</Button>
+          <Button variant="secondary" onClick={navigateToRegister}>新規登録</Button>
+        </div>
       </div>
-
-    </div>
   );
 };
 

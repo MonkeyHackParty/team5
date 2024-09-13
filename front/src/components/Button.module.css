@@ -1,24 +1,18 @@
 /* components/Button.module.css */
 .button {
-    display: block;
-    width: 100%;
-    padding: 1.2rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
-  
+  display: block;
+  width: 500px; /* ボタンの幅 */
+  padding: 1.5rem; /* 上下のパディングを増やして高さを調整 */
+  border-radius: 9999px;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem; /* 下のマージンを調整してボタン間のスペースを増やす */
+}
   .primary {
     background-color: #ffffff;
     color: black;
-    border: 2px solid rgb(0, 0, 0);
+    border: 3px solid gray;
   }
-  
   .primary:hover {
     text-decoration: underline;
   }
@@ -26,6 +20,7 @@
   .secondary {
     background-color: #32ade6;
     color: white;
+    border: 3px solid gray;
   }
   
   .secondary:hover {
