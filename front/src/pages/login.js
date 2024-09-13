@@ -1,6 +1,5 @@
 // pages/login.js
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Login.module.css'
 import Button from '../components/Button';
@@ -68,11 +67,12 @@ export default function Login() {
         />
         <div className={styles.buttonContainer}>
         <Button type="submit" variant="primary">ログイン</Button>  {/* ログインボタン */}
-        </div>
-      </form>
-      <p className={styles.link}>
+        <p className={styles.link}>
          <Link href="/register">アカウントをお持ちでない方はこちら</Link>
       </p>
+        </div>
+      </form>
+      
     </div>
   );
 }

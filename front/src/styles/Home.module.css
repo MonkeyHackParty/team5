@@ -2,7 +2,7 @@
 
 .container {
   position: relative;
-  min-height: 100dvh;
+  min-height: 450px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 
 .message {
   position: relative;
-  top: 100px; /* Adjusted top value if needed */
+  top: 150px; /* Adjusted top value if needed */
   font-size: 2.5rem;
   line-height: 1.2; /* Reduced line-height to bring lines closer */
   text-align: center;
@@ -58,14 +58,14 @@
   margin-top: 2rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1960px) {
   .backgroundWave {
     height: 800px;
     top:-400px;
   }
 
   .logo {
-    top: 70px; /* Adjust position if needed */
+    top: 300px; /* Adjust position if needed */
   }
   .message {
     width:100%;
@@ -75,7 +75,6 @@
 
   .buttonContainer {
     position:relative;
-    top: -120px;
     display: flex;
     flex-direction: column;
     align-items: center;
