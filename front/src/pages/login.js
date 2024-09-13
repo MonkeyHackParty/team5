@@ -6,6 +6,7 @@ import Button from '../components/Button';
 import useNavigation from '../utils/navigation';
 import TextInput from '../components/TextInput';
 
+
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -23,6 +24,7 @@ export default function Login() {
 
     try {
       // バックエンドの API エンドポイントに POST リクエストを送信
+
       // ここで成功するレスポンスをモックする
       const response = {
         ok: true,

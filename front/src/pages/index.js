@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import useNavigation from '../utils/navigation';  // ナビゲーションユーティリティをインポート
 
 const Home = () => {
-
+  
   const { navigateToLogin, navigateToRegister } = useNavigation();  // ナビゲーション用のカスタムフックを使用
 
   return (
