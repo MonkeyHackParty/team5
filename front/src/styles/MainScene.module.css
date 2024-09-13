@@ -1,15 +1,3 @@
-body {
-    margin: 0;
-}
-
-header {
-    background-color: #96dcf8;
-}
-
-form {
-    display: inline;
-}
-
 .rogo {
     display: inline;
     margin: 20px 35px;
@@ -18,16 +6,6 @@ form {
     font-size: 40px;
 }
 
-header button {
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: #fff;
-    background-color: #32ade6;
-}
 
 .space-select,
 .plus {
@@ -42,13 +20,6 @@ button {
     margin: 10px;
 }
 
-li {
-    list-style: none;
-    font-size: large;
-    border: solid;
-    margin-right: 20px;
-    background-color: #e5ecef;
-}
 
 .todo-item {
     font-size: 18px;
@@ -58,11 +29,6 @@ li {
 .delete {
     margin-left: 80px;
 }
-
-p {
-    margin: 0px 15px;
-}
-
 .plus button {
     margin-top: 10px;
 }

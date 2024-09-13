@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styles from '../styles/MainScene.css';
+import Link from 'next/link';
+import styles from '../styles/MainScene.module.css';
 
-
-const MainScene = () => {
+export default function Mainscene() {
     const [items, setItems] = useState([
         { id: 1, text: 'リンゴ', quantity: 9 }
     ]);
@@ -13,15 +12,17 @@ const MainScene = () => {
     };
 
     return (
-        <div className="MainScene">
+        <div className={styles.MainScene}>
             <header>
-                <h1 className="rogo">シ ェ ア っ と</h1>
-                <span className="move-right">
-                    <button>ログアウト</button>
+                <h1 className={styles.rogo}>シ ェ ア っ と</h1>
+                <span className={styles.moveRight}>
+                    <Link href="/">
+                        <button>ログアウト</button>
+                    </Link>
                 </span>
             </header>
-            <div className="space-select">
-                <Link to="/place-register">
+            <div className={styles.spaceSelect}>
+                <Link href="/placeregister">
                     <button type="button">場所を登録</button>
                 </Link>
             </div>
@@ -29,17 +30,17 @@ const MainScene = () => {
                 <ol>
                     {items.map(item => (
                         <li key={item.id}>
-                            <div className="list-row">
-                                <p className="todo-item">{item.text}</p>
+                            <div className={styles.listRow}>
+                                <p className={styles.todoItem}>{item.text}</p>
                                 <p>{item.quantity}個</p>
-                                <button className="delete" onClick={() => handleDelete(item.id)}>削除</button>
+                                <button className={styles.delete} onClick={() => handleDelete(item.id)}>削除</button>
                             </div>
                         </li>
                     ))}
                 </ol>
             </div>
-            <div className="plus">
-                <Link to="/item-list">
+            <div className={styles.plus}>
+                <Link href="/itemlist">
                     <button type="button">追加</button>
                 </Link>
             </div>
@@ -47,4 +48,4 @@ const MainScene = () => {
     );
 };
 
-export default MainScene;
+

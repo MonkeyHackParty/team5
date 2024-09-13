@@ -1,0 +1,33 @@
+.listRow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.wantItem {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.delete {
+    margin-left: 80px;
+}
+
+.inputArea {
+    text-align: center;
+}
+
+.number {
+    width: 30px;
+}
+
+.kettei {
+    text-align: center;
+}
+
+.kettei button {
+    padding: 10px 30px;
+    font-size: medium;
+    margin-top: 50px;
+}

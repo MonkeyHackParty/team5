@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styles from '../styles/PlaceRegister.css';
+import Link from 'next/link';
+import styles from '../styles/PlaceRegister.module.css';
 
-const PlaceRegister = () => {
+export default function PlaceRegister() {
     const [place, setPlace] = useState('');
 
     const handlePlaceChange = (e) => {
@@ -16,17 +16,17 @@ const PlaceRegister = () => {
     };
 
     return (
-        <div className="PlaceRegister">
+        <div className={styles.PlaceRegister}>
             <header>
-                <h1 className="rogo">シ ェ ア っ と</h1>
+                <h1 className={styles.rogo}>シ ェ ア っ と</h1>
             </header>
             <h2>行きつけの店を登録しよう</h2>
-            <div className="touroku">
+            <div className={styles.touroku}>
                 <input type="text" placeholder="場所を入力" value={place} onChange={handlePlaceChange} />
                 <button onClick={handleRegister}>登録</button>
             </div>
-            <div className="return">
-                <Link to="/">
+            <div className={styles.return}>
+                <Link href="/mainscene">
                     <button>戻る</button>
                 </Link>
             </div>
@@ -34,4 +34,3 @@ const PlaceRegister = () => {
     );
 };
 
-export default PlaceRegister;
