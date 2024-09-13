@@ -44,6 +44,7 @@ export default function Login() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.backgroundWave}></div>
       <p className={styles.message}>おかえりなさい</p>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -69,7 +70,7 @@ export default function Login() {
         <Button type="submit" variant="primary">ログイン</Button>  {/* ログインボタン */}
         </div>
       </form>
-      <p>
+      <p className={styles.link}>
          <Link href="/register">アカウントをお持ちでない方はこちら</Link>
       </p>
     </div>

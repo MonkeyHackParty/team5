@@ -1,7 +1,7 @@
 /* components/Button.module.css */
 .button {
   display: block;
-  width: 500px; /* ボタンの幅 */
+  width: 400px; /* ボタンの幅 */
   padding: 1.5rem; /* 上下のパディングを増やして高さを調整 */
   border-radius: 9999px;
   font-size: 2rem;

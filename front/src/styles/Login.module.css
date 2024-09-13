@@ -1,66 +1,142 @@
 /* Login.module.css */
-
 .container {
     position: relative;
     min-height: 100dvh;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .backgroundWave {
+}
+
+/* Login.module.css */
+.container {
+    position: relative;
+    min-height: 100dvh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backgroundWave {
     position: absolute;
-    top: -10%;
+    top: -80px; /* Adjust this value if needed */
     width: 100%;
-    height: 30%;
+    height: 200px; /* Set a fixed height for the wave */
     background-image: url('/images/HomeBackground.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     transform: scaleY(-0.8);
     z-index: -1;
-  }
-  
-  .message {
-    font-size: 2rem;
-    line-height: 1.4;
+}
+
+.message {
+    position: relative;
+    top: 100px; /* Adjusted top value if needed */
+    font-size: 2.5rem;
+    line-height: 1.2; /* Reduced line-height to bring lines closer */
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 0; /* Removed margins for better control */
+    width: 55%;
+    white-space: pre-wrap;
     color: #686868;
   }
-  
-  .form {
+
+.form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .buttonContainer {
+}
+
+.buttonContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
-  }
-  
-  @media (min-width: 1024px) {
+}
+
+.message {
+    position:relative;
+    width:80%;
+    top:180px;
+    font-size: 3rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #686868;
+}
+
+.form {
+    position:relative;
+    top:250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonContainer {
+    position:relative;
+    top:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.link{
+    position:relative;
+    font-size:1.4rem;
+    top:350px;
+    color: #00aaff;
+}
+
+.link a {
+    color: inherit; /* 親要素の色を継承 */
+}
+
+@media (min-width: 1024px) {
     .backgroundWave {
-      height: 55%;
-      top: -20%;
+      height: 800px;
+      top:-400px;
     }
-  
     .message {
-      font-size: 2.5rem;
+      width:100%;
+      top: 300px; /* Adjust message position on larger screens */
+      font-size: 3.5rem; /* Increase font size for larger screens */
     }
-  
-    .container {
-      max-width: 600px;
+
+    .form {
+        position:relative;
+        top:80px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .button, .inputContainer {
-      max-width: 400px;
+    
+    .buttonContainer {
+      position:relative;
+      top:30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .link{
+        position:relative;
+        font-size:1.4rem;
+        top:-150px;
+        color: #00aaff;
     }
   }
