@@ -1,4 +1,3 @@
-
 .rogo {
     display: inline;
     margin: 20px 35px;
@@ -7,8 +6,10 @@
     font-size: 40px;
 }
 
-
-
+/* 追加 */
+.touroku {
+    text-align: center;
+}
 
 .number {
     width: 30px;
@@ -24,6 +25,7 @@
 .delete {
     margin-left: 80px;
 }
+
 .return {
     text-align: center;
 }
@@ -33,3 +35,26 @@
     font-size: medium;
     margin-top: 50px;
 }
+
+/* 追加 */
+/* @media (min-width: 1024px) {
+    .touroku input {
+        width: 600px;
+        height: 40px;
+        font-size: larger;
+        margin-bottom: 30px;
+    }
+
+    /* header button {
+        margin-left: 600px;
+    } */
+/* 
+    button {
+        padding: 10px 20px;
+        font-size: larger;
+    } */
+
+/* h2 {
+        font-size: 30px;
+    } */
+/* }  */
