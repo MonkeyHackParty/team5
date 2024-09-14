@@ -1,8 +1,9 @@
 /* components/Button.module.css */
 .button {
   display: block;
-  width: 60vw; /* ボタンの幅 */
-  padding: 1.3rem; /* 上下のパディングを増やして高さを調整 */
+  width: 80vw; /* ボタンの幅 */
+  max-width:480px;
+  padding: 1rem; /* 上下のパディングを増やして高さを調整 */
   border-radius: 9999px;
   font-size: 2rem;
   transition: all 0.3s ease;
@@ -29,7 +30,6 @@
 
   @media(min-width:800px){
     .button{
-      width:300px;
       padding:1rem;
     }
   }

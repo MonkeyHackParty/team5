@@ -1,151 +1,82 @@
 .container {
-    position: relative;
-    min-height: 450px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .backgroundWave {
-    position: absolute;
-    top: -80px;
-    width: 100%;
-    height: 200px;
-    background-image: url('/images/HomeBackground.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: scaleY(-0.8);
-    z-index: -1;
-  }
-  
-  .message {
-    position: relative;
-    top: 150px; /* Adjusted for better fit */
-    font-size: 2.5rem; /* Reduced font size for mobile screens */
-    line-height: 1.3;
-    text-align: center;
-    margin: 0;
-    width: 90%; /* Adjusted width */
-    white-space: pre-wrap;
-    color: #686868;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  margin:0;
 }
-  
+
+/* Background wave styling */
+.backgroundWave {
+  width: 100vw; /* Full viewport width */
+  height: 20vh; /* 20% of viewport height */
+  background-image: url('/images/HomeBackground.png');
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Message styling */
+.message {
+  position:relative;
+  bottom:20px;
+  font-size: 10vw; /* Responsive font size based on viewport width */
+  line-height: 1.2;
+  text-align: center;
+  margin: 3vh auto; /* Responsive margins based on viewport height */
+  white-space: pre-wrap;
+  color: #686868;
+}
+
+/* Form styling */
 .form {
-    position: relative;
-    top: 250px; /* Adjusted position */
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
   
- .buttonContainer {
-    position: relative;
-    top: 40px; /* Adjusted position */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 2rem;
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 3vh auto; /* Centered and responsive */
+  align-items: center;
+  justify-content: center;
 }
   
-  .error {
-    color: red;
-    font-size: 1rem;
-    text-align: center;
-    margin: 1rem 0;
+.error {
+  color: red;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.link {
+  font-size: max(1rem, 3vw);
+  color: #00aaff;
+}
+
+.link a {
+  color: inherit;
+}
+
+@media (min-width: 800px) {
+  .backgroundWave {
+    background-image: url('/images/HomeBackground_PC.png');
   }
-  
+
+  .message {
+    font-size: 4rem;
+  }
+
+  .form {
+    top: 20px;
+  }
+
   .link {
-    font-size: 1.4rem;
-    color: #00aaff;
+    font-size:1.5rem;
+    position: relative;
+    top: -20px;
   }
-  
-  .link a {
-    color: inherit;
-  }
-
-  @media (min-width: 800px) {
-    .container {
-      min-height: 100vh; /* Ensure the container fits within one viewport */
-      padding: 0 20px; /* Adjust padding if necessary */
-    }
-  
-    .backgroundWave {
-      background-image: url('/images/HomeBackground_PC.png');
-      top:-50%;
-      height: 100%;
-      background-size: 100% 50%;
-    }
-  
-    .message {
-      top:90px;
-      font-size: 2.5rem;
-      width: 70%;
-    }
-  
-    .form {
-      top: 20px;
-    }
-  
-    .buttonContainer {
-      position: relative;
-      top: -15px; /* Adjusted position */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-      margin-top: 2rem;
-  }
-  
-    .link {
-      position: relative;
-      top: -20px;
-    }
-
-    
-    @media (min-width: 1600px) {
-      .container {
-        min-height: 100vh; /* Ensure the container fits within one viewport */
-        padding: 0 20px; /* Adjust padding if necessary */
-      }
-    
-      .backgroundWave {
-        top:-50%;
-        height: 100%;
-        background-size: 100% 50%;
-      }
-    
-      .message {
-        top:250px;
-        font-size: 3.5rem;
-        width: 70%;
-      }
-    
-      .form {
-        top:-200px;
-      }
-    
-      .buttonContainer {
-        position: relative;
-        top: 50px; /* Adjusted position */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
-        margin-top: 2rem;
-      }
-    
-      .link {
-        position: relative;
-        top: -20px;
-      }
-    }
-  }    
-  
+}
