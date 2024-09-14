@@ -2,34 +2,56 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/PlaceRegister.module.css';
 
-export default function PlaceRegister() {
-    const [place, setPlace] = useState('');
+const PlaceRegister = () => {
+    const [place, setPlace] = useState("");
+    const [places, setPlaces] = useState([]);
 
-    const handlePlaceChange = (e) => {
-        setPlace(e.target.value);
-    };
+    const handleAddPlace = () => {
+        if (place.trim() === "") {
+            alert("場所を入力してください。");
+            return;
+        }
 
-    const handleRegister = () => {
-        // 登録処理
-        console.log('登録する場所:', place);
-        setPlace('');
+        setPlaces([...places, place]);
+        setPlace("");
     };
 
     return (
-        <div className={styles.PlaceRegister}>
+        <div>
             <header>
                 <h1 className={styles.rogo}>シ ェ ア っ と</h1>
+                <div className={styles.logout}>
+                    <Link href="/logout">
+                        <a className={styles.logoutButton}>ログアウト</a>
+                    </Link>
+                </div>
             </header>
             <h2>行きつけの店を登録しよう</h2>
             <div className={styles.touroku}>
-                <input type="text" placeholder="場所を入力" value={place} onChange={handlePlaceChange} />
-                <button onClick={handleRegister}>登録</button>
+                <input
+                    className={styles.placeHold}
+                    type="text"
+                    placeholder="場所を入力"
+                    value={place}
+                    onChange={(e) => setPlace(e.target.value)}
+                />
+                <button onClick={handleAddPlace}>登録</button>
+            </div>
+            <hr />
+            <div className={styles.placeArea}>
+                <ol>
+                    {places.map((place, index) => (
+                        <li key={index}>{place}</li>
+                    ))}
+                </ol>
             </div>
             <div className={styles.return}>
-                <Link href="/mainscene">
-                    <button>戻る</button>
+                <Link href="/main">
+                    <a className={styles.returnButton}>戻る</a>
                 </Link>
             </div>
         </div>
     );
 };
+
+export default PlaceRegister;
