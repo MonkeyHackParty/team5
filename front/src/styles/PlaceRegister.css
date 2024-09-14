@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #96dcf8;
+}
+
+form {
+    display: inline;
+}
+
+.rogo {
+    display: inline;
+    margin: 20px 35px;
+    font-family: "Cherry Bomb One", system-ui;
+    color: #fff;
+    font-size: 40px;
+}
+
+header button {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #32ade6;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    padding: 9px 5px;
+    width: 200px;
+    margin: 5px;
+}
+
+.number {
+    width: 30px;
+}
+
+.place-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+li {
+    list-style: none;
+    font-size: large;
+    border: solid;
+    margin-right: 20px;
+    background-color: #e5ecef;
+}
+
+.delete {
+    margin-left: 80px;
+}
+
+p {
+    margin: 0 15px;
+}
+
+.return {
+    text-align: center;
+}
+
+.return button {
+    padding: 10px 30px;
+    font-size: medium;
+    margin-top: 50px;
+}
