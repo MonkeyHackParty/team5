@@ -24,7 +24,12 @@ export default function Login() {
 
     try {
       // バックエンドの API エンドポイントに POST リクエストを送信
+      const submitdata={
+        myname:username,
+        pwd:password
+      }
 
+      axios.post('https://localhost5000/api/login',submitdata);
       // ここで成功するレスポンスをモックする
       const response = {
         ok: true,
