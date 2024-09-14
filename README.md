@@ -26,7 +26,7 @@
   
 - 通知機能 -
   
-- 画面遷移図　- 以下の図参照
+- 画面遷移図
 <img src="https://github.com/user-attachments/assets/f3f86914-4b78-4ff9-8035-a20c7e31602b" alt="画面遷移図" style="width: 60%;">
 
 ## 操作説明・デモ画像
