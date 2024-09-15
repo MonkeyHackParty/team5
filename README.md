@@ -1,4 +1,4 @@
-# プロダクト名：シェアっと
+![image](https://github.com/user-attachments/assets/93dcc257-2caf-4490-b32a-8938e2fc07ee)# プロダクト名：シェアっと
 <!-- プロダクト名に変更してください -->
 
 
@@ -59,19 +59,30 @@
 </div>
 
 トップページでは,ほしいものリストが表示されます.
+![image](https://github.com/user-attachments/assets/4ccd599e-91b4-4b3a-a5c7-0df518b82e46)
 
 商品追加画面では,商品名と個数を入力することで該当商品を追加することができます.
+![image](https://github.com/user-attachments/assets/06facb70-96d4-4e1f-8f8e-2ae88a559a4e)
 
 場所登録画面では,日頃使う店を入力することで位置情報を登録します.
+![image](https://github.com/user-attachments/assets/598c99c6-7e19-46d5-9a09-d7310cb95824)
+
+通知は以下のように表示されます.
+![image](https://github.com/user-attachments/assets/c930c97f-be41-498a-a859-3a69328b3eb6)
+
 
 ## 注力したポイント・工夫点
 <!-- 開発したプロダクトの注力したポイント・工夫点を入力してください -->
 
 ### フロントエンド
-- レスポンシブデザインの対応
-
+- レスポンシブデザインの一部対応
+- ナビゲーションを意識
+- 位置情報の取得
 ### バックエンド
 - 位置情報を利用した通知機能
+- セッション管理を用いてユーザビリティの向上
+- 位置情報を取得するためのアルゴリズム
+- メールで位置情報を知らせる機能
 
 ## 使用技術
 | Category       | Technology Stack   |
