@@ -52,22 +52,22 @@
 
 ## 操作説明・デモ画像
 <!-- 開発したプロダクトの操作説明について入力してください。また、操作説明デモ動画があれば、埋め込みやリンクを記載してください -->
-ホーム画面に飛んだらアカウント登録を行い,ログインを行います.
+#### ホーム画面に飛んだらアカウント登録を行い,ログインを行います.
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/user-attachments/assets/4e273272-60b8-4092-9e01-135d3b99ead5" alt="登録画面" style="width: 48%;"/>
   <img src="https://github.com/user-attachments/assets/061d1ba4-0bee-40e2-a35d-d2120cb2a084" alt="ログイン画面" style="width: 48%;"/>
 </div>
 
-トップページでは,ほしいものリストが表示されます.
+#### トップページでは,ほしいものリストが表示されます.
 ![image](https://github.com/user-attachments/assets/4ccd599e-91b4-4b3a-a5c7-0df518b82e46)
 
-商品追加画面では,商品名と個数を入力することで該当商品を追加することができます.
+#### 商品追加画面では,商品名と個数を入力することで該当商品を追加することができます.
 ![image](https://github.com/user-attachments/assets/06facb70-96d4-4e1f-8f8e-2ae88a559a4e)
 
-場所登録画面では,日頃使う店を入力することで位置情報を登録します.
+#### 場所登録画面では,日頃使う店を入力することで位置情報を登録します.
 ![image](https://github.com/user-attachments/assets/598c99c6-7e19-46d5-9a09-d7310cb95824)
 
-通知は以下のように表示されます.
+#### 通知は以下のように表示されます.
 ![image](https://github.com/user-attachments/assets/c930c97f-be41-498a-a859-3a69328b3eb6)
 
 
