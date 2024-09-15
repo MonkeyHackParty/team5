@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/93dcc257-2caf-4490-b32a-8938e2fc07ee)# プロダクト名：シェアっと
+# プロダクト名：シェアっと
 <!-- プロダクト名に変更してください -->
 
 
@@ -100,5 +100,3 @@
 markdownの記法はこちらを参照してください！
 https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 -->
-
-## 今後の展望
