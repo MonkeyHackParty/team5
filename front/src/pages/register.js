@@ -4,37 +4,39 @@ import styles from '../styles/Register.module.css';
 import Button from '../components/Button';
 import TextInput from '../components/TextInput';
 import useNavigation from '../utils/navigation';
+import axios from 'axios';
 
 export default function Register() {
   const [familyName, setFamilyName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { navigateToMain } = useNavigation(); 
+  const { navigateToMain } = useNavigation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Simple validation
     if (!familyName || !username || !password) {
       setError('すべてのフィールドを入力してください。');
       return;
     }
 
-    try {
-      // Simulate backend response
-      const response = {
-        ok: true,
-        json: async () => ({ message: '登録成功しました。' }),
-      };
+    // サーバーへのリクエストデータ
+    const submitdata = {
+      family: familyName,
+      pwd: password,
+      user: username // 配列形式で送信
+    };
 
-      // Handle the simulated response
-      const result = await response.json();
-      console.log('登録成功:', result);
-      setError('');
-      navigateToMain();
+    try {
+      // サーバーへの POST リクエスト
+      const response = await axios.post('http://localhost:5000/api/new', submitdata,{withCredentials: true});
+      console.log('登録成功:', response.data);
+      setError(''); // 成功した場合はエラーをクリア
+      navigateToMain(); // メインページに遷移
     } catch (err) {
-      setError('登録に失敗しました。');
+      console.error('Error:', err);
+      setError('登録に失敗しました。'); // エラーを表示
     }
   };
 
@@ -74,11 +76,10 @@ export default function Register() {
         <div className={styles.buttonContainer}>
           <Button type="submit" variant="secondary">新規登録</Button>
           <p className={styles.link}>
-        <Link href="/login">アカウントをお持ちの方はこちら</Link>
-      </p>
+            <Link href="/login">アカウントをお持ちの方はこちら</Link>
+          </p>
         </div>
       </form>
-      
     </div>
   );
 }

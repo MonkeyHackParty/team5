@@ -8,6 +8,7 @@ const Home = () => {
   
   const { navigateToLogin, navigateToRegister } = useNavigation();  // ナビゲーション用のカスタムフックを使用
 
+  
   return (
     <div className={styles.container}>
       <div className={styles.backgroundWave}></div>

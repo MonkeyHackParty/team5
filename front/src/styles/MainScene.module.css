@@ -1,0 +1,34 @@
+.rogo {
+    display: inline;
+    margin: 20px 35px;
+    font-family: "Cherry Bomb One", system-ui;
+    color: #fff;
+    font-size: 40px;
+}
+
+
+.space-select,
+.plus {
+    text-align: center;
+    margin: 20px;
+}
+
+.list-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+
+.todo-item {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.delete {
+    margin-left: 80px;
+}
+.plus button {
+    margin-top: 10px;
+}

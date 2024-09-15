@@ -1,0 +1,37 @@
+.rogo {
+    display: inline;
+    margin: 20px 35px;
+    font-family: "Cherry Bomb One", system-ui;
+    color: #fff;
+    font-size: 40px;
+}
+
+/* 追加 */
+.touroku {
+    text-align: center;
+}
+
+.number {
+    width: 30px;
+}
+
+.place-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.delete {
+    margin-left: 80px;
+}
+
+.return {
+    text-align: center;
+}
+
+.return button {
+    padding: 10px 30px;
+    font-size: medium;
+    margin-top: 50px;
+}

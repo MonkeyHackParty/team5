@@ -1,49 +1,39 @@
 // pages/login.js
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from '../styles/Login.module.css'
+import styles from '../styles/Login.module.css';
 import Button from '../components/Button';
 import useNavigation from '../utils/navigation';
 import TextInput from '../components/TextInput';
-
+import axios from 'axios';
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { navigateToMain } = useNavigation(); 
+  const { navigateToMainScene } = useNavigation(); 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // 簡単なバリデーション
     if (!username || !password) {
       setError('すべてのフィールドを入力してください。');
       return;
     }
 
     try {
-      // バックエンドの API エンドポイントに POST リクエストを送信
-      const submitdata={
-        myname:username,
-        pwd:password
+      const submitdata = { myname: username, pwd: password };
+
+      const response = await axios.post('http://localhost:5000/api/login', submitdata,{withCredentials: true});
+      
+      if (response.data && response.data.message === 'Login successful') {
+        console.log('ログイン成功:', response.data);
+        setError('');
+        navigateToMainScene();
+      } else {
+        setError('ログインに失敗しました。');
       }
-
-      axios.post('https://localhost5000/api/login',submitdata);
-      // ここで成功するレスポンスをモックする
-      const response = {
-        ok: true,
-        json: async () => ({ message: 'ログイン成功しました。' }),
-      };
-
-      // 上記のモックされたレスポンスを `fetch` が返すようにする
-      const result = await response.json();
-      console.log('ログイン成功:', result);
-      setError('');
-      // ログイン後に /memo_list ページにリダイレクト
-      navigateToMain();
     } catch (err) {
-      // エラーメッセージの設定
       setError('ログインに失敗しました。');
     }
   };
@@ -73,13 +63,12 @@ export default function Login() {
           error={password === '' && error ? 'パスワードは必須です。' : ''}
         />
         <div className={styles.buttonContainer}>
-          <Button type="submit" variant="primary">ログイン</Button>  {/* ログインボタン */}
+          <Button type="submit" variant="primary">ログイン</Button>
           <p className={styles.link}>
-          <Link href="/register">アカウントをお持ちでない方はこちら</Link>
+            <Link href="/register">アカウントをお持ちでない方はこちら</Link>
           </p>
         </div>
       </form>
-      
     </div>
   );
 }
